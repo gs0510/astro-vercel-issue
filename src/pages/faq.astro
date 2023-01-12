@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const questions = [
+  {
+    q: `What is SharpSeat?`,
+    a: `SharpSeat is an online ticket marketplace with millions of tickets for sports, concert, and theater events worldwide.`,
+  },
+  {
+    q: `Where do you get your tickets?`,
+    a: `SharpSeat does not personally purchase the tickets listed on our site. Our tickets come from an expansive network of sellers and fans. We pay to access these tickets at wholesale prices so that we can make them available to our customers.`,
+  },
+  {
+    q: `What is the SharpSeat 100% buyer guarantee?`,
+    a: `Our top priority is making sure our customers experience a sense of trust, peace of mind, and satisfaction with every purchase. You are guaranteed to receive the exact tickets you purchased, or we'll find you better ones.`,
+  },
+  {
+    q: `Is my information safe when buying on SharpSeat?`,
+    a: `Yes. Our checkout process uses 256-bit encryption, and is constantly monitored by McAfee Secure, TRUSTe, and VeriSign to ensure that your information is always safe and secure.`,
+  },
+  {
+    q: `Are the seats that I am buying together/side-by-side?`,
+    a: `Yes. Your tickets are guaranteed to be together unless it specifically says they are not.`,
+  },
+  {
+    q: `What if I order tickets from SharpSeat and I receive different tickets? Was there a mistake?`,
+    a: `If you receive your tickets and notice any discrepancies between your order and the actual tickets, contact us right away. We guarantee you will receive the exact tickets you order or we'll find you an upgrade!`,
+  },
+  {
+    q: `I just placed an order. How will I get my tickets?`,
+    a: `Depending on the time of the event and original type of ticket, shipping options may vary. The typical options include Mail or Instant Download. If a listing has an option of Special Delievery (Will Call, Local Pick Up, etc) it will be stated before you process your order.`,
+  },
+  {
+    q: `The name on the E-mailed ticket is different from mine – is this ticket still valid?`,
+    a: `Yes. Unless specifically mentioned it does not matter what name appears on the ticket. Many of our tickets are sold by fans just like you.`,
+  },
+  {
+    q: `What if my tickets are lost or stolen?`,
+    a: `SharpSeat is not responsible for any lost or stolen tickets. We strongly recommend that customers protect all tickets as they would cash. Our Sales Terms specifically state that "Lost or Stolen Tickets will not be replaced under any circumstances." Our customer service team will do our best to have lost tickets reissued or re-emailed when possible. We will always attempt to contact our sellers to get the lost or stolen tickets reissued but are not held liable if the sellers are unable to do so. Tickets are the sole responsibility of the ticket purchaser.`,
+  },
+];
+---
+
+<Layout title="Frequently Asked Questions">
+  <div class="bg-white">
+    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div class="max-w-2xl lg:mx-auto lg:text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Frequently asked questions
+        </h2>
+        <!-- <p class="mt-4 text-gray-500">
+          Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing
+          sagittis vel nulla nec. Urna, sed a lectus elementum blandit et.
+        </p> -->
+      </div>
+      <div class="mt-20">
+        <dl
+          class="space-y-10 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10 lg:space-y-0"
+        >
+          {
+            questions.map(({ q, a }) => (
+              <div>
+                <dt class="font-semibold text-gray-900">{q}</dt>
+                <dd class="mt-3 text-gray-500">{a}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</Layout>
